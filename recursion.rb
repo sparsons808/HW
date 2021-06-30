@@ -22,20 +22,17 @@ end
 # p add_numbers([-80,34,7]) # => returns -39
 # p add_numbers([]) # => returns nil
 
-# def fact(num)
-#     return 1 if n == 1
-#     fact(n-1) * n
-# end
 
-# def gamma_fnc(n)
-#     return nil if n == 0
-#     gamma_fnc(n) = fact(n-1)
-# end
+def gamma_fnc(n)
+    return nil if n < 1
+    return 1 if n == 1
+    (n-1) * gamma_fnc(n-1)
+end
 
-# p gamma_fnc(0)  # => returns nil
-# p gamma_fnc(1)  # => returns 1
-# p gamma_fnc(4)  # => returns 6
-# p gamma_fnc(8)  # => returns 5040
+p gamma_fnc(0)  # => returns nil
+p gamma_fnc(1)  # => returns 1
+p gamma_fnc(4)  # => returns 6
+p gamma_fnc(8)  # => returns 5040
 
 def ice_cream_shop(flavors, favorite)
     if flavors.empty?
