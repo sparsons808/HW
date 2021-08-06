@@ -9,28 +9,28 @@
 //     console.log(`Hammertime is set for ${time}`);
 // };
 
-const readline = require('readline');
+// const readline = require('readline');
 
-const reader = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+// const reader = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
 
-function teaAndBiscuits (callback) {
+// function teaAndBiscuits (callback) {
 
-    reader.question('Would you like some tea?', function (res1) {
-        reader.question('Would you like some bisciots?', function (res2) {
-            callback(res1, res2)
-        });
-    });
-}
+//     reader.question('Would you like some tea?', function (res1) {
+//         reader.question('Would you like some bisciots?', function (res2) {
+//             callback(res1, res2)
+//         });
+//     });
+// }
 
-teaAndBiscuits( function callback (response1, response2) {
-    if ( response1 === 'yes' && response2 === 'yes') {
-        console.log(`So you ${response1} you want tea and ${response2} you want biscuits.`);
-        reader.close();
-    };
-});
+// teaAndBiscuits( function callback (response1, response2) {
+//     if ( response1 === 'yes' && response2 === 'yes') {
+//         console.log(`So you ${response1} you want tea and ${response2} you want biscuits.`);
+//         reader.close();
+//     };
+// });
 
 const readline=require('readline');
 
@@ -53,8 +53,10 @@ function teaAndBiscuits() {
             const second=(res2==='yes')?'do':'don\'t';
 
             console.log(`So you ${first} want tea and you ${second} want biscuits.`);
-            
+
             reader.close();
         });
     });
 }
+
+teaAndBiscuits();
